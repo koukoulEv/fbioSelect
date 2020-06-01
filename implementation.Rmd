@@ -1,0 +1,46 @@
+---
+title: "Two-stage algorithm test"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is an R markdown document which uses a small fragment of the GDSC data and implemets the two-stage algorithm.
+
+```{r}
+load("/home/koukouli/Documents/gdsc_paper/R package develop/test_gdsc_data.RData")
+source("/home/koukouli/Documents/gdsc_paper/R package develop/two_stage_algorithm_functions.R")
+```
+
+Function Implementation with weights:
+
+```{r}
+result = tsalgo(y = fd$Response, 
+                id = fd$ID,
+                t.var = fd$DosageSQ, 
+                Z = model.matrix(~fd$DRUG_NAME),
+                X = fd[,-c(1:5)],
+                low.dim.cov.number = 1, 
+                threshold.size = floor(length(unique(fd$ID))/log(length(unique(fd$ID)))),
+                type.of.penalty = "grSCAD", 
+                degree = 3,
+                intercept = T, 
+                degrFreedom = 5, 
+                knots = NULL, 
+                weights = fd$weights, 
+                nfolds = 10,
+                seed = 1000)
+
+par(mfrow = c(2,2))
+plot(seq(0,1,length = ncol(result$coefFunctions.pen.regression))^2, result$coefFunctions.pen.regression[1,], type = "l",
+     xlab = "Dosage level", ylab = "Response", main = "Intercept")
+plot(seq(0,1,length = ncol(result$coefFunctions.pen.regression))^2, result$coefFunctions.pen.regression[2,], type = "l",
+     xlab = "Dosage level", ylab = "Response", main = "SB590885")
+plot(seq(0,1,length = ncol(result$coefFunctions.pen.regression))^2, result$coefFunctions.pen.regression[3,], type = "l",
+     xlab = "Dosage level", ylab = "Response", main = paste(result$active.hdcov.pen.regression[1]))
+plot(seq(0,1,length = ncol(result$coefFunctions.pen.regression))^2, result$coefFunctions.pen.regression[4,], type = "l",
+     xlab = "Dosage level", ylab = "Response", main = paste(result$active.hdcov.pen.regression[2]))
+par(mfrow = c(1,1))
+```
