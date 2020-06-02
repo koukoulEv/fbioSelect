@@ -1,6 +1,6 @@
 # Main function implementing the two stage algortihm 
 
-tsalgo = function(y, # response vector (only continuous responses acceptable)
+fbioSelect = function(y, # response vector (only continuous responses acceptable)
                   id, # a vector with the unique ids corresponding to the response vector supplied
                   t.var, # the varying time or dosage under which the responses were recorded 
                   Z, # a matrix of low-dimensional covariates (object obtained from the model.matrix function)
