@@ -1,0 +1,9 @@
+exportPattern("^[[:alpha:]]+")
+
+importFrom("stats", "lm")
+importFrom("dplyr", "arrange","%>%", "filter")
+importFrom("iterators", "iter")
+importFrom("splines", "bs")
+importFrom("foreach", "foreach", "%do%", "%dopar%")
+importFrom("grpreg", "grpreg", "cv.grpreg")
+importFrom("doParallel", "registerDoParallel")
