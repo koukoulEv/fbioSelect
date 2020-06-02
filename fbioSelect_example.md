@@ -11,7 +11,7 @@ source("/home/koukouli/Documents/gdsc_paper/R package develop/two_stage_algorith
 Function Implementation with weights:
 
 ``` r
-result = tsalgo(y = fd$Response, 
+result = fbioSelect(y = fd$Response, 
                 id = fd$ID,
                 t.var = fd$DosageSQ, 
                 Z = model.matrix(~fd$DRUG_NAME),
