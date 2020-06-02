@@ -5,7 +5,7 @@ This is an R markdown document which uses a small fragment of the GDSC data and 
 
 ``` r
 load("/home/koukouli/Documents/gdsc_paper/R package develop/test_gdsc_data.RData")
-source("/home/koukouli/Documents/gdsc_paper/R package develop/two_stage_algorithm_functions.R")
+source("/home/koukouli/Documents/gdsc_paper/R package develop/fbioSelect.R")
 ```
 
 Function Implementation with weights:
