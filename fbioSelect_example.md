@@ -1,7 +1,7 @@
-Two-stage algorithm test
-================
+Example for the fbioSelect function
+===================================
 
-This is an R markdown document which uses a small fragment of the GDSC data and implemets the two-stage algorithm.
+This is an R markdown document which uses a small fragment of the GDSC data and implemets the two-stage algorithm used in the paper "A regularized functional regression model enabling transcriptome-wide dosage-dependent association study of cancer drug response" by E. Koukouli, D. Wang, F. Dondelinger and J. Park
 
 ``` r
 load("/home/koukouli/Documents/gdsc_paper/R package develop/test_gdsc_data.RData")
