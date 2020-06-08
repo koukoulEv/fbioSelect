@@ -22,21 +22,21 @@
 fbioSelect = function(y,id,t.var,Z,X,low.dim.cov.number=1,threshold.size,type.of.penalty,degree=3,intercept=FALSE,degrFreedom=NULL,knots = NULL,weights=NULL,nfolds=10,seed=1000, ncores = 3){
 
   if (requireNamespace("dplyr", quietly = TRUE)) {
-    dplyr::arrange()
     dplyr::`%>%`
-    dplyr::filter()
+    dplyr::filter
+    dplyr::arrange
   }
   if (requireNamespace("foreach", quietly = TRUE)) {
-    foreach::foreach()
+    foreach::foreach
     foreach::`%do%`
     foreach::`%dopar%`
   }
   if (requireNamespace("grpreg", quietly = TRUE)) {
-    grpreg::grpreg()
-    grpreg::cv.grpreg()
+    grpreg::grpreg
+    grpreg::cv.grpreg
   }
   if (requireNamespace("doParallel", quietly = TRUE)) {
-    doParallel::registerDoParallel()
+    doParallel::registerDoParallel
   }
 
   registerDoParallel(cores = ncores)
@@ -75,7 +75,8 @@ fbioSelect = function(y,id,t.var,Z,X,low.dim.cov.number=1,threshold.size,type.of
               Lgrid, t.varGrid, degrFreedom, intercept, degree, knots, t.var, weights)
 
   ## Rank the high dimensional covariates based on their utility
-  geneRanking = data.frame(hdcov = high_dim_cov_names, score = mse_screening) %>% arrange("score") # rank the high dimensional covariates according to their utility
+  addDtfr = data.frame(hdcov = high_dim_cov_names, score = mse_screening)
+  geneRanking = arrange(addDtfr, score) # rank the high dimensional covariates according to their utility
   ## Select the top ranked high dimensional covariates according to the threshold applied and the ranking based on their utility
   outranked_hdcov = geneRanking[1:threshold.size,]
 

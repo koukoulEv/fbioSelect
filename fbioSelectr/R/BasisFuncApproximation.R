@@ -12,13 +12,13 @@
 BasisFuncApproximation = function(designMtrx, grid, degrFreedom, degree, intercept, knots){
 
   if (requireNamespace("foreach", quietly = TRUE)) {
-    foreach::foreach()
+    foreach::foreach
   }
   if (requireNamespace("iterators", quietly = TRUE)) {
-    iterators::iter()
+    iterators::iter
   }
   if (requireNamespace("splines", quietly = TRUE)) {
-    splines::bs()
+    splines::bs
   }
 
   B0 = bs(grid, df =  degrFreedom ,intercept = intercept, degree = degree, knots = knots)

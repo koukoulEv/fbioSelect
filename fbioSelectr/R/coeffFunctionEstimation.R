@@ -13,7 +13,7 @@
 #' @export
 coeffFunctionEstimation = function(p, LgridA, gridA, degrFreedom, degree, intercept, b, knots){
   if (requireNamespace("splines", quietly = TRUE)) {
-    splines::bs()
+    splines::bs
   }
   Beta = matrix(0, nrow = p+1, ncol = LgridA)
 

@@ -24,7 +24,7 @@
 screening = function(i,BasisMtrx, X, y, Ggroup, luniq_id, uniq_id, lut.var, ut.var,p,Lgrid, t.varGrid, degrFreedom, intercept, degree, knots, t.var, weights){
 
   if (requireNamespace("splines", quietly = TRUE)) {
-    splines::bs()
+    splines::bs
   }
 
   B0 = bs(t.var, df =  degrFreedom ,intercept = intercept, degree = degree, knots = knots)

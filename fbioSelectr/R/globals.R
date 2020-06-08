@@ -1,1 +1,1 @@
-utils::globalVariables(c("a", "i"))
+utils::globalVariables(c("a", "i", "score"))
