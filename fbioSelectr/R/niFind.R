@@ -1,6 +1,6 @@
 #' Compute regression weights for repeated measures data
 #'
-#' Takes the data and subject ids and creates the independence weights.
+#' Takes the data and subject ids and creates independence weights.
 #' @param data a dataframe including the response vector.
 #' @param idLabel the name of the variable in the dataframe containing subjects ids.
 #' @return Independence structure repeated measures weights.

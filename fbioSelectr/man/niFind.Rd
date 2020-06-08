@@ -15,5 +15,5 @@ niFind(data, idLabel)
 Independence structure repeated measures weights.
 }
 \description{
-Takes the data and subject ids and creates the independence weights.
+Takes the data and subject ids and creates independence weights.
 }

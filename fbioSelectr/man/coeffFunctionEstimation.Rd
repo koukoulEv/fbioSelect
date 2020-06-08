@@ -2,7 +2,7 @@
 % Please edit documentation in R/coeffFunctionEstimation.R
 \name{coeffFunctionEstimation}
 \alias{coeffFunctionEstimation}
-\title{Coefficinet function estimation}
+\title{Coefficient function estimation}
 \usage{
 coeffFunctionEstimation(
   p,
@@ -36,5 +36,5 @@ coeffFunctionEstimation(
 The estimated coefficient functions.
 }
 \description{
-Takes a design matrix and converts it to the corresponding basis function approximation.
+Takes the estimated coefficients of the basis expansion and returns the estimated coefficient function for each covariate.
 }

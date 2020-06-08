@@ -23,5 +23,5 @@ BasisFuncApproximation(designMtrx, grid, degrFreedom, degree, intercept, knots)
 The basis approximation matrix of the imported design matrix.
 }
 \description{
-Takes a design matrix and converts it to the corresponding basis function approximation.
+Takes a design matrix and converts it to the corresponding basis function approximation using B-splines.
 }

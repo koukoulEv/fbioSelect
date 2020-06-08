@@ -2,7 +2,7 @@
 % Please edit documentation in R/fbioSelect.R
 \name{fbioSelect}
 \alias{fbioSelect}
-\title{Two-stage variable selection algorithm}
+\title{A two-stage variable selection algorithm for repeated measures data}
 \usage{
 fbioSelect(
   y,
@@ -60,5 +60,5 @@ fbioSelect(
 A list including the ranking of the high dimensional covariates based on the marginal fit (variable screening step), the high-dimensional covariates that have been selected from the second step (group penalised regression), the estimated coefficient functions, the regression weights used and the group penalised regression path (\code{\link{grpreg}} output).
 }
 \description{
-From a high-dimensional set of time-invariant covariates, selects those which are associated to the functional (repeated measures) response given some how-dimensional covariates.
+From a high-dimensional set of time-invariant covariates (e.g. biomarkers), selects those which are associated to the functional (repeated measures) response given some low-dimensional covariates.
 }

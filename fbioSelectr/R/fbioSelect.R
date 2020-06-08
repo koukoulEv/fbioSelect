@@ -1,6 +1,6 @@
-#' Two-stage variable selection algorithm
+#' A two-stage variable selection algorithm for repeated measures data
 #'
-#' From a high-dimensional set of time-invariant covariates, selects those which are associated to the functional (repeated measures) response given some how-dimensional covariates.
+#' From a high-dimensional set of time-invariant covariates (e.g. biomarkers), selects those which are associated to the functional (repeated measures) response given some low-dimensional covariates.
 #' @param y a response vector where only continuous responses are acceptable. Responses are expected to be time or dose varying.
 #' @param id a vector including the identification codes for the response vector supplied.
 #' @param t.var the varying time or dose under which the responses were recorded.

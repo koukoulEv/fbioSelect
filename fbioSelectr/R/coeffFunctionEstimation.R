@@ -1,6 +1,6 @@
-#' Coefficinet function estimation
+#' Coefficient function estimation
 #'
-#' Takes a design matrix and converts it to the corresponding basis function approximation.
+#' Takes the estimated coefficients of the basis expansion and returns the estimated coefficient function for each covariate.
 #' @param p number of parameters in the data.
 #' @param LgridA number of grid points on which the coefficient functions will be estimated.
 #' @param gridA the grid points on which the coefficient functions will be estimated.

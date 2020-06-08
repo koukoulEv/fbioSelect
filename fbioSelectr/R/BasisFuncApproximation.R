@@ -1,6 +1,6 @@
 #' Basis Function Approximation
 #'
-#' Takes a design matrix and converts it to the corresponding basis function approximation.
+#' Takes a design matrix and converts it to the corresponding basis function approximation using B-splines.
 #' @param designMtrx the design matrix of time-invariant covariates.
 #' @param grid a vector of the grid points for the basis function approximation (length equal to the number of rows of designMtrx).
 #' @param degrFreedom the degrees of freedom for the polynomial basis used. See \code{\link{bs}} documentation.
