@@ -1,11 +1,9 @@
----
-title: "This is an example for the use of fbioSelectr package"
-author: "Evanthia Koukouli"
-date: "8 June 2020"
-output: rmarkdown::github_document
----
+This is an example for the use of fbioSelectr package
+================
+Evanthia Koukouli
+8 June 2020
 
-```{r}
+``` r
 # load the fbioSelectr package
 library(fbioSelectr)
 
@@ -40,6 +38,10 @@ plot(seq(0,1,length = ncol(result$coefFunctions.pen.regression))^2, result$coefF
      xlab = "Dosage level", ylab = "Response", main = paste(result$active.hdcov.pen.regression[1]))
 plot(seq(0,1,length = ncol(result$coefFunctions.pen.regression))^2, result$coefFunctions.pen.regression[4,], type = "l",
      xlab = "Dosage level", ylab = "Response", main = paste(result$active.hdcov.pen.regression[2]))
-par(mfrow = c(1,1))
 ```
 
+![](fbioSelect_example_files/figure-markdown_github/unnamed-chunk-1-1.png)
+
+``` r
+par(mfrow = c(1,1))
+```
