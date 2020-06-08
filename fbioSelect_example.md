@@ -41,7 +41,3 @@ plot(seq(0,1,length = ncol(result$coefFunctions.pen.regression))^2, result$coefF
 ```
 
 ![](fbioSelect_example_files/figure-markdown_github/unnamed-chunk-1-1.png)
-
-``` r
-par(mfrow = c(1,1))
-```

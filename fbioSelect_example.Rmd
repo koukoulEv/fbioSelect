@@ -40,6 +40,5 @@ plot(seq(0,1,length = ncol(result$coefFunctions.pen.regression))^2, result$coefF
      xlab = "Dosage level", ylab = "Response", main = paste(result$active.hdcov.pen.regression[1]))
 plot(seq(0,1,length = ncol(result$coefFunctions.pen.regression))^2, result$coefFunctions.pen.regression[4,], type = "l",
      xlab = "Dosage level", ylab = "Response", main = paste(result$active.hdcov.pen.regression[2]))
-par(mfrow = c(1,1))
 ```
 
